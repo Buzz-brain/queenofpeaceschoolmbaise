@@ -1,0 +1,5 @@
+import { Link } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
+import { Image } from '@/components/ui/image';
+import { programs } from './data';
+export default function HomeAcademics() {return <section className="academic-section section-pad"><div className="shell"><div className="section-top"><span className="eyebrow">04 / ACADEMICS</span><span className="section-rule" /></div><div className="academic-heading"><h2>A foundation for<br /><em>academic excellence.</em></h2><Link to="/academics" className="under-link">Explore academics <ArrowUpRight size={18} /></Link></div><div className="program-grid">{programs.map((p) => <Link to="/academics" className="program" key={p.name}><div className="program-image"><Image src="https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/35dbaaee7_IMG_20250520_115034_779_-_george_opara.jpg" alt={p.image.alt} className="fill-image" fittingType="fill" /><span className="program-watermark">{p.name[0]}</span></div><div className="program-bottom"><span>{p.no} / PROGRAMME</span><h3>{p.name}</h3><ArrowUpRight size={24} /></div><p>{p.text}</p></Link>)}</div></div></section>;}

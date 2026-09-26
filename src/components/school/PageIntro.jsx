@@ -1,0 +1,3 @@
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
+export default function PageIntro({ index, label, title, description }) { return <section className="page-intro"><div className="shell"><Link to="/" className="back-link"><ArrowLeft size={15}/> Back to home</Link><div className="page-intro-grid"><span className="eyebrow">{index} / {label}</span><div><h1>{title}</h1>{description && <p>{description}</p>}</div></div></div></section>; }

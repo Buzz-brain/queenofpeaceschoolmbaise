@@ -1,0 +1,6 @@
+import PageIntro from '@/components/school/PageIntro';
+import { Link } from 'react-router-dom';
+import { ArrowUpRight } from 'lucide-react';
+import { Image } from '@/components/ui/image';
+import { images } from '@/components/school/data';
+export default function Leadership() { return <><PageIntro index="03" label="LEADERSHIP" title={<>Led with <em>purpose.</em></>} description="Meet the principal of Queen of Peace Model Secondary School."/><section className="inner-section"><div className="shell leader-detail"><div className="leader-art"><Image src={images.students.src} alt={images.students.alt} className="leader-art-photo" fittingType="fill"/><span className="photo-caption">ILLUSTRATIVE IMAGE</span></div><div className="leader-text"><span className="eyebrow">THE PRINCIPAL</span><h2>Rev. Sr.<br/><em>Harriett Ubah</em></h2><div className="divider"/><p>Principal<br/>Queen of Peace Model Secondary School</p><Link to="/contact" className="under-link">Get in touch with the school <ArrowUpRight size={18}/></Link></div></div></section></>; }
