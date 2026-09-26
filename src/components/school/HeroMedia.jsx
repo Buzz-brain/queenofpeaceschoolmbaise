@@ -48,5 +48,5 @@ export default function HeroMedia() {
 
   }
 
-  return <Image src="https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/5f51d826b_WhatsApp_Image_2026-09-18_at_112304.jpeg" alt={image.alt} className="hero-image" fittingType="fill" />;
+  return <Image src={image.src} alt={image.alt} className="hero-image" fittingType="fill" />;
 }

@@ -13,9 +13,11 @@ export const nav = [
   { label: 'Gallery', path: '/gallery' }, { label: 'Admissions', path: '/admissions' }, { label: 'Contact', path: '/contact' }
 ];
 // Replace any URL here when approved school photographs become available.
+const building = { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/5f51d826b_WhatsApp_Image_2026-09-18_at_112304.jpeg', alt: 'The Queen of Peace Model Secondary School building' };
+
 export const images = {
   logo: { src: 'https://res.cloudinary.com/df2q6gyuq/image/upload/w_240,c_limit/v1754589763/rev_fr_tochi_sch_logo_-_Queen_of_Peace_nkcvgq.png', alt: 'Queen of Peace Model Secondary School logo' },
-  building: { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/df85a98b4_generated_image.png', alt: 'Illustrative image of the Queen of Peace Model Secondary School building' },
+  building,
   students: { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/85bf63844_generated_176ed34a.jpg', alt: 'Illustrative image of a student in a school courtyard' },
   about: { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/10781ece0_generated_fa10abc5.jpg', alt: 'Illustrative image of students learning together outdoors' },
   faith: { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/dbf04dd06_generated_993ba4bb.jpg', alt: 'Illustrative Catholic school prayer space' },
@@ -24,7 +26,7 @@ export const images = {
   life: { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/673200a95_generated_427bd142.jpg', alt: 'Illustrative image of students walking together in a courtyard' },
   gallery: [
     { src: 'https://res.cloudinary.com/df2q6gyuq/image/upload/w_900,c_limit/v1754845464/IMG_20250408_094328_289_-_george_opara_qvhcot.jpg', alt: 'Students learning together in a classroom', category: 'Learning' },
-    { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/df85a98b4_generated_image.png', alt: 'The Queen of Peace Model Secondary School building', category: 'Campus' },
+    { ...building, category: 'Campus' },
     { src: 'https://res.cloudinary.com/df2q6gyuq/image/upload/w_900,c_limit/v1754845461/IMG_20250408_094258_240_-_george_opara_ksfv80.jpg', alt: 'Students in the school community', category: 'Community' }
   ]
 };
