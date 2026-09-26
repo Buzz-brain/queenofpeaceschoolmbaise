@@ -14,17 +14,18 @@ export const nav = [
 ];
 // Replace any URL here when approved school photographs become available.
 export const images = {
+  logo: { src: 'https://res.cloudinary.com/df2q6gyuq/image/upload/w_240,c_limit/v1754589763/rev_fr_tochi_sch_logo_-_Queen_of_Peace_nkcvgq.png', alt: 'Queen of Peace Model Secondary School logo' },
   building: { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/df85a98b4_generated_image.png', alt: 'Illustrative image of the Queen of Peace Model Secondary School building' },
   students: { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/85bf63844_generated_176ed34a.jpg', alt: 'Illustrative image of a student in a school courtyard' },
   about: { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/10781ece0_generated_fa10abc5.jpg', alt: 'Illustrative image of students learning together outdoors' },
   faith: { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/dbf04dd06_generated_993ba4bb.jpg', alt: 'Illustrative Catholic school prayer space' },
-  arts: { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/cfe9ae7ef_generated_c3b5374f.jpg', alt: 'Illustrative image of students reading and writing' },
-  science: { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/2d08b94b6_generated_10ce5aa0.jpg', alt: 'Illustrative image of science learning with a microscope' },
+  arts: { src: 'https://res.cloudinary.com/df2q6gyuq/image/upload/w_900,c_limit/v1754845459/IMG_20250311_143450_993_-_george_opara_xgaiq6.jpg', alt: 'Queen of Peace students in the Arts programme' },
+  science: { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/35dbaaee7_IMG_20250520_115034_779_-_george_opara.jpg', alt: 'Queen of Peace students in the Science programme' },
   life: { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/673200a95_generated_427bd142.jpg', alt: 'Illustrative image of students walking together in a courtyard' },
   gallery: [
-    { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/305931f2d_generated_06a5ae56.jpg', alt: 'Illustrative classroom study scene', category: 'Learning' },
-    { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/a62c3ae22_generated_20c42f9e.jpg', alt: 'Illustrative school courtyard scene', category: 'Campus' },
-    { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/25375c20f_generated_4a3e7791.jpg', alt: 'Illustrative student community scene', category: 'Community' }
+    { src: 'https://res.cloudinary.com/df2q6gyuq/image/upload/w_900,c_limit/v1754845464/IMG_20250408_094328_289_-_george_opara_qvhcot.jpg', alt: 'Students learning together in a classroom', category: 'Learning' },
+    { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/df85a98b4_generated_image.png', alt: 'The Queen of Peace Model Secondary School building', category: 'Campus' },
+    { src: 'https://res.cloudinary.com/df2q6gyuq/image/upload/w_900,c_limit/v1754845461/IMG_20250408_094258_240_-_george_opara_ksfv80.jpg', alt: 'Students in the school community', category: 'Community' }
   ]
 };
 // Hero media. Change `mode` to swap what fills the hero visual — the hero layout stays the same.

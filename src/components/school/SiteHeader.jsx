@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
-import { nav, school } from './data';
+import { nav, school, images } from './data';
 export default function SiteHeader() {
   const [open, setOpen] = useState(false), [scrolled, setScrolled] = useState(false);
   const location = useLocation();
@@ -10,7 +10,7 @@ export default function SiteHeader() {
   useEffect(() => { document.body.style.overflow = open ? 'hidden' : ''; const closeOnEscape = e => { if (e.key === 'Escape') setOpen(false); }; window.addEventListener('keydown', closeOnEscape); return () => { document.body.style.overflow = ''; window.removeEventListener('keydown', closeOnEscape); }; }, [open]);
   return <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
     <div className="header-inner">
-      <Link to="/" className="brand" aria-label="Queen of Peace home"><span className="brand-mark" aria-hidden="true">QP<span>✦</span></span><span className="brand-name">Queen of Peace<small>MODEL SECONDARY SCHOOL</small></span></Link>
+      <Link to="/" className="brand" aria-label="Queen of Peace home"><img className="brand-logo" src={images.logo.src} alt={images.logo.alt} width="46" height="46" /><span className="brand-name">Queen of Peace<small>MODEL SECONDARY SCHOOL</small></span></Link>
       <nav className="desktop-nav" aria-label="Main navigation">{nav.map(item => <NavLink key={item.path} to={item.path} className={({isActive}) => isActive ? 'active' : ''}>{item.label}</NavLink>)}</nav>
       <a className="portal-link" href={school.portal} target="_blank" rel="noopener noreferrer">Portal Login <ArrowUpRight size={15}/></a>
       <button className="menu-toggle" type="button" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="mobile-navigation" aria-label={open ? 'Close menu' : 'Open menu'}>{open ? <X size={25}/> : <Menu size={25}/>}</button>
