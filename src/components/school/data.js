@@ -1,6 +1,10 @@
 import edubeyondImage from '@/assets/img/edubeyond.jpg';
 import learningImage from '@/assets/img/learning.jpg';
 import communityImage from '@/assets/img/community.jpg';
+import studentWithFatherImage from '@/assets/img/student-with-father.jpg';
+import principalOfficeImage from '@/assets/img/principal-office.jpg';
+import gradOne from '@/assets/img/grad-1.jpg';
+import gradTwo from '@/assets/img/grad-2.jpg';
 
 export const school = {
   name: 'Queen of Peace Model Secondary School',
@@ -22,8 +26,13 @@ const building = { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a
 export const images = {
   logo: { src: 'https://res.cloudinary.com/df2q6gyuq/image/upload/w_240,c_limit/v1754589763/rev_fr_tochi_sch_logo_-_Queen_of_Peace_nkcvgq.png', alt: 'Queen of Peace Model Secondary School logo' },
   building,
-  students: { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/85bf63844_generated_176ed34a.jpg', alt: 'Illustrative image of a student in a school courtyard' },
+  students: { src: studentWithFatherImage, alt: 'A Queen of Peace student with a reverend father' },
   about: { src: edubeyondImage, alt: 'Classroom learning at Queen of Peace Model Secondary School' },
+  principalOffice: { src: principalOfficeImage, alt: 'The principal at work in her office at Queen of Peace Model Secondary School' },
+  graduates: [
+    { src: gradOne, alt: 'A page from the Queen of Peace graduation list' },
+    { src: gradTwo, alt: 'A page from the Queen of Peace graduation list' }
+  ],
   faith: { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/dbf04dd06_generated_993ba4bb.jpg', alt: 'Illustrative Catholic school prayer space' },
   arts: { src: 'https://res.cloudinary.com/df2q6gyuq/image/upload/w_900,c_limit/v1754845459/IMG_20250311_143450_993_-_george_opara_xgaiq6.jpg', alt: 'Queen of Peace students in the Arts programme' },
   science: { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/35dbaaee7_IMG_20250520_115034_779_-_george_opara.jpg', alt: 'Queen of Peace students in the Science programme' },
@@ -39,10 +48,10 @@ export const images = {
 // 'slideshow' → cycles through `slides` every `interval` milliseconds.
 // 'video'     → plays `video.src` (set it to an mp4 URL) with `image` as the poster frame.
 export const heroMedia = {
-  mode: 'image',
+  mode: 'slideshow',
   interval: 6000,
   image: images.building,
-  slides: [images.building, images.students, images.life],
+  slides: [images.building, images.about, images.students],
   video: { src: '', type: 'video/mp4', alt: 'A short film about Queen of Peace Model Secondary School' }
 };
 export const values = [
