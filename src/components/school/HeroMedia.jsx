@@ -9,10 +9,14 @@ export default function HeroMedia() {
   const isSlideshow = mode === 'slideshow' && slides.length > 1;
   const isVideo = mode === 'video' && Boolean(video.src);
   const [index, setIndex] = useState(0);
+  const [prevIndex, setPrevIndex] = useState(slides.length ? slides.length - 1 : 0);
 
   useEffect(() => {
     if (!isSlideshow) return;
-    const timer = setInterval(() => setIndex((i) => (i + 1) % slides.length), interval);
+    const timer = setInterval(() => {
+      setIndex((i) => (i + 1) % slides.length);
+      setPrevIndex((p) => (p + 1) % slides.length);
+    }, interval);
     return () => clearInterval(timer);
   }, [isSlideshow, slides.length, interval]);
 
@@ -35,15 +39,19 @@ export default function HeroMedia() {
   if (isSlideshow) {
     return (
       <div className="hero-slides">
-        {slides.map((slide, i) =>
-        <Image
-          key={slide.src}
-          src={slide.src}
-          alt={i === index ? slide.alt : ''}
-          className={`hero-image transition-opacity duration-1000 ${i === index ? 'opacity-100' : 'opacity-0'}`}
-          fittingType="fill" />
-
-        )}
+        {slides.map((slide, i) => {
+          let movement = 'translate-x-0 opacity-100';
+          if (i === prevIndex) movement = 'translate-x-[-105%] opacity-0';
+          else if (i !== index) movement = 'translate-x-[105%] opacity-0';
+          return (
+            <Image
+              key={slide.src}
+              src={slide.src}
+              alt={i === index ? slide.alt : ''}
+              className={`hero-image transition-all duration-[900ms] ease-[cubic-bezier(.2,.7,.2,1)] ${movement}`}
+              fittingType="fill" />
+          );
+        })}
       </div>);
 
   }
