@@ -37,6 +37,7 @@ export const images = {
   arts: { src: 'https://res.cloudinary.com/df2q6gyuq/image/upload/w_900,c_limit/v1754845459/IMG_20250311_143450_993_-_george_opara_xgaiq6.jpg', alt: 'Queen of Peace students in the Arts programme' },
   science: { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/35dbaaee7_IMG_20250520_115034_779_-_george_opara.jpg', alt: 'Queen of Peace students in the Science programme' },
   life: { src: 'https://media.base44.com/images/public/6ab4d29f49c6fd7a6aaab45d/673200a95_generated_427bd142.jpg', alt: 'Illustrative image of students walking together in a courtyard' },
+  community: { src: communityImage, alt: 'Students in the school community' },
   gallery: [
     { src: learningImage, alt: 'Students learning together in a classroom', category: 'Learning' },
     { ...building, category: 'Campus' },
@@ -51,7 +52,7 @@ export const heroMedia = {
   mode: 'slideshow',
   interval: 6000,
   image: images.building,
-  slides: [images.building, images.about, images.students],
+  slides: [images.building, images.community, images.students],
   video: { src: '', type: 'video/mp4', alt: 'A short film about Queen of Peace Model Secondary School' }
 };
 export const values = [
