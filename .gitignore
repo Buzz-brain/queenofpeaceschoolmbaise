@@ -38,3 +38,5 @@ base44/.app.jsonc
 
 # Vercel local CLI state (project id, build cache)
 .vercel
+
+src/assets/img/Downloads

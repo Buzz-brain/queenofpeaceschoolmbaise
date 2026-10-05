@@ -3,6 +3,8 @@ import learningImage from '@/assets/img/learning.jpg';
 import communityImage from '@/assets/img/community.jpg';
 import studentWithFatherImage from '@/assets/img/student-with-father.jpg';
 import principalOfficeImage from '@/assets/img/principal-office.jpg';
+import principalPhoto from '@/assets/img/principal-photo.jpg';
+import schoolDirectorPhoto from '@/assets/img/schooldir.jpg';
 import gradOne from '@/assets/img/grad-1.jpg';
 import gradTwo from '@/assets/img/grad-2.jpg';
 
@@ -29,6 +31,8 @@ export const images = {
   students: { src: studentWithFatherImage, alt: 'A Queen of Peace student with a reverend father' },
   about: { src: edubeyondImage, alt: 'Classroom learning at Queen of Peace Model Secondary School' },
   principalOffice: { src: principalOfficeImage, alt: 'The principal at work in her office at Queen of Peace Model Secondary School' },
+  principal: { src: principalPhoto, alt: 'Rev. Sr. Miriam Doris Agbakwuru, Principal of Queen of Peace Model Secondary School', width: 900, height: 931 },
+  director: { src: schoolDirectorPhoto, alt: 'Rev. Fr. Tochi Opara, School Director of Queen of Peace Model Secondary School' },
   graduates: [
     { src: gradOne, alt: 'A page from the Queen of Peace graduation list' },
     { src: gradTwo, alt: 'A page from the Queen of Peace graduation list' }
@@ -55,6 +59,18 @@ export const heroMedia = {
   slides: [images.building, images.community, images.students],
   video: { src: '', type: 'video/mp4', alt: 'A short film about Queen of Peace Model Secondary School' }
 };
+export const leaders = [
+  {
+    badge: 'PRINCIPAL', eyebrow: 'THE PRINCIPAL', caption: 'CAPABLE LEADER',
+    nameLines: ['Rev. Sr.', 'Miriam Doris', 'Agbakwuru'],
+    position: 'Principal', image: images.principal, flip: false
+  },
+  {
+    badge: 'SCHOOL DIRECTOR', eyebrow: 'THE SCHOOL DIRECTOR', caption: 'THE SCHOOL DIRECTOR',
+    nameLines: ['Rev. Fr.', 'Tochi Opara'],
+    position: 'School Director', image: images.director, flip: true
+  }
+];
 export const values = [
   { no: '01', name: 'Excellence', text: 'Academic growth, intellectual curiosity and high standards.' },
   { no: '02', name: 'Honesty', text: 'Integrity, discipline and moral character.' },

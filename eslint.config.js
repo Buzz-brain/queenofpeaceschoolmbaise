@@ -6,6 +6,11 @@ import pluginUnusedImports from "eslint-plugin-unused-imports";
 
 export default [
   {
+    // A local scratch folder of unrelated downloads; kept out of git and out of
+    // lint/vite traversal so it never slows the toolchain down.
+    ignores: ["src/assets/img/Downloads/**/*"],
+  },
+  {
     files: [
       "src/components/**/*.{js,mjs,cjs,jsx}",
       "src/pages/**/*.{js,mjs,cjs,jsx}",

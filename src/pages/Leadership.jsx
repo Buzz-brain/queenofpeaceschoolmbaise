@@ -1,7 +1,41 @@
+import { Fragment } from 'react';
 import PageIntro from '@/components/school/PageIntro';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import { Image } from '@/components/ui/image';
-import principalPhoto from '@/assets/img/principal-photo.jpg';
-import { images } from '@/components/school/data';
-export default function Leadership() { return <><PageIntro index="03" label="LEADERSHIP" title={<>Led with <em>purpose.</em></>} description="Meet the principal of Queen of Peace Model Secondary School."/><section className="inner-section"><div className="shell leader-detail"><div className="leader-art"><Image src={principalPhoto} alt="Rev. Sr. Miriam Doris Agbakwuru, Principal of Queen of Peace Model Secondary School" className="leader-art-photo" width="900" height="931"/><span className="photo-caption">CAPABLE LEADER</span></div><div className="leader-text"><span className="eyebrow">THE PRINCIPAL</span><h2>Rev. Sr.<br/><em>Miriam Doris<br/>Agbakwuru</em></h2><div className="divider"/><p>Principal<br/>Queen of Peace Model Secondary School</p><Link to="/contact" className="under-link">Get in touch with the school <ArrowUpRight size={18}/></Link></div></div></section><section className="inner-section"><div className="shell"><span className="eyebrow">IN THE WORK OF THE SCHOOL</span><div className="leader-work"><Image src={images.principalOffice.src} alt={images.principalOffice.alt} className="fill-image" fittingType="fill" /><span className="photo-caption">THE PRINCIPAL AT WORK</span></div></div></section></>; }
+import { images, leaders } from '@/components/school/data';
+
+function LeaderName({ nameLines }) {
+  return <h2>{nameLines[0]}<br/><em>{nameLines.slice(1).map(line => <Fragment key={line}><br />{line}</Fragment>)}</em></h2>;
+}
+
+export default function Leadership() {
+  return <><PageIntro index="03" label="LEADERSHIP" title={<>Led with <em>purpose.</em></>} description="Meet the leadership of Queen of Peace Model Secondary School." />
+    <section className="inner-section">
+      <div className="shell">
+        {leaders.map(l => <div key={l.position} className={`leader-detail${l.flip ? ' flip' : ''}`}>
+          <div className="leader-art">
+            <Image src={l.image.src} alt={l.image.alt} className="leader-art-photo" width={l.image.width} height={l.image.height} />
+            <span className="photo-caption">{l.caption}</span>
+          </div>
+          <div className="leader-text">
+            <span className="eyebrow">{l.eyebrow}</span>
+            <LeaderName nameLines={l.nameLines} />
+            <div className="divider" />
+            <p>{l.position}<br />Queen of Peace Model Secondary School</p>
+            <Link to="/contact" className="under-link">Get in touch with the school <ArrowUpRight size={18} /></Link>
+          </div>
+        </div>)}
+      </div>
+    </section>
+    <section className="inner-section">
+      <div className="shell">
+        <span className="eyebrow">IN THE WORK OF THE SCHOOL</span>
+        <div className="leader-work">
+          <Image src={images.principalOffice.src} alt={images.principalOffice.alt} className="fill-image" fittingType="fill" />
+          <span className="photo-caption">THE PRINCIPAL AT WORK</span>
+        </div>
+      </div>
+    </section>
+  </>;
+}
