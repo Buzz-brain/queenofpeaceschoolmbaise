@@ -15,7 +15,7 @@ export const school = {
   phone: '08065256135', email: 'qpgroupofschoolsmbaise@gmail.com',
   portal: 'https://bridgetech.ng/portal/queenofpeace',
   motto: 'Excellence · Honesty · Service',
-  stats: [{ value: '2008', label: 'Established' }, { value: '180', label: 'Students' }, { value: '22', label: 'Teachers' }]
+  stats: [{ value: '2008', label: 'Established' }, { value: '275', label: 'Students' }, { value: '22', label: 'Teachers' }]
 };
 export const nav = [
   { label: 'About', path: '/about' }, { label: 'Academics', path: '/academics' },
